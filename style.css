@@ -772,3 +772,27 @@ body {
     pointer-events: none;
     filter: blur(3px);
 }
+/* ===== BOTÓN PLAYLIST ===== */
+
+.playlist-container{
+    display:flex;
+    justify-content:center;
+    margin:25px 0;
+}
+
+.playlist-btn{
+    text-decoration:none;
+    background:#ff7eb6;
+    color:white;
+    padding:14px 28px;
+    border-radius:15px;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+    box-shadow:0 5px 12px rgba(0,0,0,.2);
+}
+
+.playlist-btn:hover{
+    background:#ff5ca2;
+    transform:translateY(-3px) scale(1.05);
+}
