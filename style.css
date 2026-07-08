@@ -798,14 +798,14 @@ body {
     transform:translateY(-3px) scale(1.05);
 }
 /* =====================================
-   ✨ OTROS PROYECTOS
+   ✨ OTROS PROYECTOS - ESTILO BM
 ===================================== */
 .proyectos {
     margin-top: 50px;
     padding: 30px;
-    background: rgba(255, 250, 252, 0.8);
+    background: rgba(250, 248, 240, 0.85);
     border-radius: 30px;
-    border: 2px dashed #ffd1df;
+    border: 2px dashed #d8c7a8;
 }
 /* TITULO DE SECCIÓN */
 .seccion-header {
@@ -817,8 +817,8 @@ body {
 }
 .seccion-header h2 {
     font-size: 35px;
-    color: #df5b88;
-    text-shadow: 2px 2px #ffdbe8;
+    color: #34495e;
+    text-shadow: 2px 2px #e8dcc5;
 }
 .deco {
     font-size: 30px;
@@ -833,42 +833,45 @@ body {
 /* TARJETA DE CADA PROYECTO */
 .proyecto-extra {
     width: 280px;
-    background: white;
+    background: rgba(255,255,255,0.85);
     padding: 20px;
     border-radius: 25px;
     text-align: center;
-    border: 3px solid #ffd1df;
-    box-shadow: 0 8px 20px rgba(255, 120, 160, 0.20);
+    border: 3px solid #e4d6bd;
+    box-shadow: 0 8px 20px rgba(80, 90, 100, 0.15);
     transition: .3s;
+
 }
 .proyecto-extra:hover {
     transform: translateY(-10px);
 }
 /* IMAGEN/BOTÓN DEL PROYECTO */
+
 .proyecto-extra img {
     width: 230px;
     height: 160px;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 15px;
     cursor: pointer;
     transition: .3s;
 }
 .proyecto-extra img:hover {
     transform: scale(1.08);
 }
-
 /* NOMBRE DEL PROYECTO */
 .proyecto-extra h3 {
     margin-top: 15px;
-    color: #d94f7c;
+    color: #34495e;
     font-size: 24px;
 }
+
 /* DESCRIPCIÓN */
 .proyecto-extra p {
-    color: #666;
+    color: #6b6b6b;
     font-size: 16px;
     line-height: 1.4;
 }
+
 /* RESPONSIVE */
 @media(max-width:700px){
     .seccion-header h2 {
