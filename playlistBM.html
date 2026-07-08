@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FNAFHS · VIDEOS HUB</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<div class="bg-cuaderno"></div>
+
+<div class="main-container">
+
+    <!-- ===== STICKERS ===== -->
+    <div class="sticker sticker-top-right">⭐</div>
+    <div class="sticker sticker-bottom-left">🌸</div>
+
+    <!-- ===== CARTEL MOTIVACIONAL ===== -->
+    <div class="motivacion-card">
+        <h2>💌 Disfruta</h2>
+    </div>
+
+    <!-- ===== TÍTULO ===== -->
+    <header class="header">
+        <h1>🎬 Covers</h1>
+    </header>
+
+    <!-- ===== LISTA DE VIDEOS ===== -->
+    <section class="videos-grid">
+
+        <!-- VIDEO 3 -->
+        <div class="video-card" data-id="cov3">
+            <a href="https://www.youtube.com/watch?v=VIDEO_ID3" target="_blank">
+                <img src="https://img.youtube.com/vi/VIDEO_ID3/hqdefault.jpg">
+                <div class="play-button">▶</div>
+            </a>
+            <p class="video-title">COVER 3</p>
+
+            <div class="reacciones">
+                <button class="like-btn">👍 <span>0</span></button>
+                <button class="dislike-btn">👎 <span>0</span></button>
+            </div>
+        </div>
+
+        <!-- VIDEO 4 -->
+        <div class="video-card" data-id="cov4">
+            <a href="https://www.youtube.com/watch?v=VIDEO_ID4" target="_blank">
+                <img src="https://img.youtube.com/vi/VIDEO_ID4/hqdefault.jpg">
+                <div class="play-button">▶</div>
+            </a>
+            <p class="video-title">COVER 4</p>
+
+            <div class="reacciones">
+                <button class="like-btn">👍 <span>0</span></button>
+                <button class="dislike-btn">👎 <span>0</span></button>
+            </div>
+        </div>
+
+        <!-- VIDEO 5 -->
+        <div class="video-card" data-id="cov5">
+            <a href="https://www.youtube.com/watch?v=VIDEO_ID5" target="_blank">
+                <img src="https://img.youtube.com/vi/VIDEO_ID5/hqdefault.jpg">
+                <div class="play-button">▶</div>
+            </a>
+            <p class="video-title">COVER 5</p>
+
+            <div class="reacciones">
+                <button class="like-btn">👍 <span>0</span></button>
+                <button class="dislike-btn">👎 <span>0</span></button>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+<!-- ===== JS LIKE / DISLIKE ===== -->
+<script>
+document.querySelectorAll(".video-card").forEach(card => {
+
+    const id = card.dataset.id;
+
+    const likeBtn = card.querySelector(".like-btn");
+    const dislikeBtn = card.querySelector(".dislike-btn");
+
+    let state = localStorage.getItem(id) || "none";
+
+    const likeSpan = likeBtn.querySelector("span");
+    const dislikeSpan = dislikeBtn.querySelector("span");
+
+    function updateUI() {
+        likeBtn.classList.remove("active");
+        dislikeBtn.classList.remove("active");
+
+        let likes = 0;
+        let dislikes = 0;
+
+        if (state === "like") {
+            likeBtn.classList.add("active");
+            likes = 1;
+        } else if (state === "dislike") {
+            dislikeBtn.classList.add("active");
+            dislikes = 1;
+        }
+
+        likeSpan.textContent = likes;
+        dislikeSpan.textContent = dislikes;
+    }
+
+    likeBtn.addEventListener("click", () => {
+        state = (state === "like") ? "none" : "like";
+        localStorage.setItem(id, state);
+        updateUI();
+    });
+
+    dislikeBtn.addEventListener("click", () => {
+        state = (state === "dislike") ? "none" : "dislike";
+        localStorage.setItem(id, state);
+        updateUI();
+    });
+
+    updateUI();
+});
+</script>
+
+</body>
+</html>
