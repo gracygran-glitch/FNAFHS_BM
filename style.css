@@ -797,3 +797,120 @@ body {
     background:#ff5ca2;
     transform:translateY(-3px) scale(1.05);
 }
+/* =================================
+   OTROS PROYECTOS
+================================= */
+
+
+.otros-proyectos {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+
+    padding: 30px;
+
+}
+
+
+
+/* TARJETA GENERAL */
+
+.proyecto-card {
+
+    background: #fff;
+
+    border: 3px solid #ffd1df;
+
+    border-radius: 25px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(255,100,150,.15);
+
+    transition: .3s;
+
+}
+
+
+
+.proyecto-card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+
+
+/* IMAGEN */
+
+.proyecto-card img {
+
+    width: 100%;
+
+    max-width: 260px;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+}
+
+
+
+/* TITULO */
+
+.proyecto-card h3 {
+
+    color:#df5b88;
+
+    font-size:24px;
+
+}
+
+
+
+/* TEXTO */
+
+.proyecto-card p {
+
+    color:#666;
+
+}
+
+
+
+/* BOTON */
+
+.proyecto-card .boton {
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:10px 25px;
+
+    background:#ff91b5;
+
+    color:white;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+
+.proyecto-card .boton:hover {
+
+    background:#ff5f91;
+
+}
